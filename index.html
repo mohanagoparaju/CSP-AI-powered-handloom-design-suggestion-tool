@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDLOOM STUDIO | AI-Powered Indian Handloom Fashion & Textile Atelier</title>
+    <meta name="description" content="HANDLOOM STUDIO (Chenetha Design Mitra) - A luxury Indian ethnic handloom atelier powered by artificial intelligence. Craft bespoke traditional sarees with voice & text assistance, authentic motifs, and jacquard weaving specifications.">
+    
+    <!-- Google Fonts for Luxury Indian Fashion Brand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- =============================================================
+         BRAND NAVIGATION BAR (Sticky, Elegant & Responsive)
+         ============================================================= -->
+    <header class="navbar" id="mainNavbar">
+        <div class="nav-container">
+            
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo" onclick="navigateToPage('home'); return false;">
+                <div class="logo-emblem">
+                    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="1.2"/>
+                        <path d="M14 3L4 9l10 6 10-6-10-6zM4 19l10 6 10-6M4 14l10 6 10-6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                        <circle cx="14" cy="14" r="2.5" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="logo-typography">
+                    <span class="brand-name">HANDLOOM STUDIO</span>
+                    <span class="brand-tagline" data-en="Chenetha Design Mitra | AI Atelier" data-te="చేనేత డిజైన్ మిత్ర | ఆర్టిసాన్ స్టూడియో">Chenetha Design Mitra | AI Atelier</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" id="navLink-home" onclick="navigateToPage('home'); return false;">
+                    <span data-en="Home" data-te="హోమ్">Home</span>
+                </a>
+                <a href="#explore" class="nav-link" id="navLink-explore" onclick="navigateToPage('explore'); return false;">
+                    <span data-en="Explore Designs" data-te="సేకరణలు">Explore Designs</span>
+                </a>
+                <a href="#studio" class="nav-link nav-link-studio" id="navLink-studio" onclick="navigateToPage('studio'); return false;">
+                    <span class="studio-sparkle">✦</span>
+                    <span data-en="Design Studio" data-te="డిజైన్ స్టూడియో">Design Studio</span>
+                </a>
+                <a href="#about" class="nav-link" id="navLink-about" onclick="navigateToPage('about'); return false;">
+                    <span data-en="About" data-te="మా గురించి">About</span>
+                </a>
+                <a href="#contact" class="nav-link" id="navLink-contact" onclick="navigateToPage('contact'); return false;">
+                    <span data-en="Contact" data-te="సంప్రదించండి">Contact</span>
+                </a>
+            </nav>
+
+            <!-- Utility Actions -->
+            <div class="nav-actions">
+                <!-- Saved Designs Collection Button -->
+                <button class="btn-nav-collection" id="openCollectionBtn" type="button" title="View Saved Designs">
+                    <span class="icon">📁</span>
+                    <span class="text" data-en="Saved" data-te="దాచినవి">Saved</span>
+                </button>
+
+                <!-- Language Switcher -->
+                <div class="lang-switch-group">
+                    <button class="lang-btn active" id="langEnBtn" onclick="switchLanguage('en-US')" type="button">EN</button>
+                    <span class="lang-sep">|</span>
+                    <button class="lang-btn" id="langTeBtn" onclick="switchLanguage('te-IN')" type="button">తెలుగు</button>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu" type="button" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <div class="mobile-drawer-links">
+                <a href="#home" class="mobile-nav-link active" onclick="navigateToPage('home'); closeMobileMenu(); return false;">
+                    <span data-en="Home / Discover" data-te="హోమ్">Home / Discover</span>
+                </a>
+                <a href="#explore" class="mobile-nav-link" onclick="navigateToPage('explore'); closeMobileMenu(); return false;">
+                    <span data-en="Explore Designs" data-te="డిజైన్ల సేకరణ">Explore Designs</span>
+                </a>
+                <a href="#studio" class="mobile-nav-link" onclick="navigateToPage('studio'); closeMobileMenu(); return false;">
+                    <span data-en="Design Studio (Create)" data-te="డిజైన్ స్టూడియో">Design Studio (Create)</span>
+                </a>
+                <a href="#about" class="mobile-nav-link" onclick="navigateToPage('about'); closeMobileMenu(); return false;">
+                    <span data-en="About Handloom Heritage" data-te="మా గురించి">About Handloom Heritage</span>
+                </a>
+                <a href="#contact" class="mobile-nav-link" onclick="navigateToPage('contact'); closeMobileMenu(); return false;">
+                    <span data-en="Contact & Clusters" data-te="సంప్రదించండి">Contact & Clusters</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- =============================================================
+         MAIN VIEWPORT CONTAINER
+         ============================================================= -->
+    <main class="site-main">
+
+        <!-- =========================================================
+             PAGE ONE: HOME / DISCOVER
+             ========================================================= -->
+        <section id="page-home" class="page-view active">
+            
+            <!-- Hero Section -->
+            <div class="hero-editorial">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-tagline-group">
+                            <span class="hero-kicker">
+                                <span class="kicker-gem">❖</span>
+                                <span data-en="Heritage Weaving Meets Artificial Intelligence" data-te="సాంప్రదాయ నేతకు ఆధునిక AI తోడ్పాటు">Heritage Weaving Meets Artificial Intelligence</span>
+                            </span>
+                        </div>
+                        <h1 class="hero-headline">
+                            <span data-en="Where Tradition Meets Creativity" data-te="సంప్రదాయం మరియు సృజనాత్మకత కలయిక">Where Tradition Meets Creativity</span>
+                        </h1>
+                        <p class="hero-subtext" data-en="Discover timeless handloom patterns and create bespoke saree designs inspired by your imagination. Express concepts through Telugu or English voice assistance, synthesize authentic jacquard palettes, and empower traditional weavers." data-te="మీ ఊహాత్మక చీర డిజైన్లను తెలుగు లేదా ఇంగ్లీషులో మాట్లాడి క్షణాల్లో రూపొందించండి. ప్రాచీన చేనేత కళా వైభవాన్ని ఆధునిక సాంకేతికతతో ఆస్వాదించండి.">
+                            Discover timeless handloom patterns and create bespoke saree designs inspired by your imagination. Express concepts through Telugu or English voice assistance, synthesize authentic jacquard palettes, and empower traditional weavers.
+                        </p>
+                        
+                        <div class="hero-cta-group">
+                            <button class="btn-primary-luxury" onclick="navigateToPage('studio')" type="button">
+                                <span>✦</span>
+                                <span data-en="Create Your Own Design" data-te="మీ స్వంత డిజైన్ సృష్టించండి">Create Your Own Design</span>
+                                <span class="arrow">➔</span>
+                            </button>
+                            <button class="btn-secondary-luxury" onclick="navigateToPage('explore')" type="button">
+                                <span data-en="Explore Collections" data-te="సేకరణలను వీక్షించండి">Explore Collections</span>
+                            </button>
+                        </div>
+
+                        <!-- Brand Highlights -->
+                        <div class="hero-stats-strip">
+                            <div class="stat-item">
+                                <span class="stat-number">6+</span>
+                                <span class="stat-label" data-en="Heritage Clusters" data-te="చేనేత కేంద్రాలు">Heritage Clusters</span>
+                            </div>
+                            <div class="stat-divider">❖</div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label" data-en="Authentic Silk & Zari" data-te="స్వచ్ఛమైన పట్టు & జరీ">Authentic Silk & Zari</span>
+                            </div>
+                            <div class="stat-divider">❖</div>
+                            <div class="stat-item">
+                                <span class="stat-number">240-320</span>
+                                <span class="stat-label" data-en="Jacquard Punch Cards" data-te="జాకార్డ్ మగ్గం వివరాలు">Jacquard Punch Cards</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Showcase -->
+                    <div class="hero-visual-col">
+                        <div class="hero-saree-frame">
+                            <div class="saree-frame-glow"></div>
+                            <div class="saree-visual-inner">
+                                <!-- Opulent Saree Visual Illustration -->
+                                <svg class="hero-saree-svg" viewBox="0 0 540 640" preserveAspectRatio="xMidYMid slice">
+                                    <defs>
+                                        <linearGradient id="silkCrimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#4A0812"/>
+                                            <stop offset="30%" stop-color="#7B1425"/>
+                                            <stop offset="70%" stop-color="#5E0D1B"/>
+                                            <stop offset="100%" stop-color="#34050D"/>
+                                        </linearGradient>
+                                        <linearGradient id="goldLuster" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#C5A059"/>
+                                            <stop offset="50%" stop-color="#FBF0D2"/>
+                                            <stop offset="100%" stop-color="#C5A059"/>
+                                        </linearGradient>
+                                        <pattern id="sareeChecks" width="40" height="40" patternUnits="userSpaceOnUse">
+                                            <rect width="40" height="40" fill="none" stroke="#D4AF37" stroke-width="0.7" opacity="0.35"/>
+                                            <circle cx="20" cy="20" r="1.5" fill="#D4AF37" opacity="0.7"/>
+                                        </pattern>
+                                    </defs>
+                                    <!-- Silk Saree Body -->
+                                    <rect width="540" height="640" fill="url(#silkCrimsonGrad)"/>
+                                    <!-- Woven Checks -->
+                                    <rect width="540" height="640" fill="url(#sareeChecks)"/>
+                                    
+                                    <!-- Top Zari Border Band -->
+                                    <rect x="0" y="0" width="540" height="60" fill="#3D060F"/>
+                                    <rect x="0" y="55" width="540" height="5" fill="url(#goldLuster)"/>
+                                    <line x1="0" y1="20" x2="540" y2="20" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="6,4"/>
+                                    
+                                    <!-- Bottom Grand Temple Border -->
+                                    <rect x="0" y="460" width="540" height="180" fill="#2E040B"/>
+                                    <rect x="0" y="456" width="540" height="4" fill="url(#goldLuster)"/>
+                                    <!-- Temple Gopuram Spikes -->
+                                    <path d="M 0 460 L 30 400 L 60 460 L 90 400 L 120 460 L 150 400 L 180 460 L 210 400 L 240 460 L 270 400 L 300 460 L 330 400 L 360 460 L 390 400 L 420 460 L 450 400 L 480 460 L 510 400 L 540 460 Z" fill="#7B1425" stroke="#D4AF37" stroke-width="2"/>
+                                    
+                                    <!-- Grand Medallion Pallu Motif -->
+                                    <circle cx="270" cy="550" r="45" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                                    <circle cx="270" cy="550" r="32" fill="#7B1425" stroke="#FBF0D2" stroke-width="1.5"/>
+                                    <circle cx="270" cy="550" r="14" fill="#C5A059"/>
+                                    
+                                    <!-- Ornamental Corners & Accent Jewels -->
+                                    <circle cx="60" cy="550" r="18" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+                                    <circle cx="480" cy="550" r="18" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+                                </svg>
+                                <div class="saree-frame-label">
+                                    <span class="label-cluster" data-en="Bridal Mangalagiri Pure Silk" data-te="మంగళగిరి పట్టు చీర">Bridal Mangalagiri Pure Silk</span>
+                                    <span class="label-craft" data-en="2/120s Mulberry Silk | Nizam Gopuram Border" data-te="నిజాం గోపురం బోర్డర్ | బంగారు జరీ">2/120s Mulberry Silk | Nizam Gopuram Border</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Collections Section -->
+            <div class="featured-collections-sec">
+                <div class="site-container">
+                    <div class="section-editorial-header">
+                        <span class="sub-flourish">❖ TIMLESS ARCHIVES ❖</span>
+                        <h2 class="section-title" data-en="Featured Handloom Collections" data-te="ప్రముఖ చేనేత శైలులు">Featured Handloom Collections</h2>
+                        <p class="section-intro" data-en="Explore authentic saree categories revered across generations of South Indian handloom clusters." data-te="తరతరాల వారసత్వంగా వస్తున్న ప్రముఖ చేనేత చీరల విభాగాలను పరిశీలించండి.">
+                            Explore authentic saree categories revered across generations of South Indian handloom clusters.
+                        </p>
+                    </div>
+
+                    <!-- Collection Cards Grid -->
+                    <div class="collections-grid">
+                        
+                        <!-- 1. Floral Elegance -->
+                        <div class="collection-luxury-card" onclick="selectStyleAndGoStudio('Floral')">
+                            <div class="card-visual-wrapper">
+                                <div class="card-bg-sheen" style="background: linear-gradient(135deg, #5C0B1B 0%, #8E1B31 100%);"></div>
+                                <svg viewBox="0 0 100 100" class="card-motif-svg">
+                                    <circle cx="50" cy="50" r="9" fill="#D4AF37"/>
+                                    <path d="M50 16 C42 30 42 38 50 38 C58 38 58 30 50 16 Z M50 84 C42 70 42 62 50 62 C58 62 58 70 50 84 Z M16 50 C30 42 38 42 38 50 C38 58 30 58 16 50 Z M84 50 C70 42 62 42 62 50 C62 58 70 58 84 50 Z" fill="#FBF0D2"/>
+                                    <circle cx="50" cy="50" r="4" fill="#5C0B1B"/>
+                                </svg>
+                                <span class="card-cluster-pill" data-en="Silk Brocade" data-te="పట్టు బ్రొకేడ్">Silk Brocade</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" data-en="Floral Elegance" data-te="పూల డిజైన్ (లత & కమలం)">Floral Elegance</h3>
+                                <div class="card-subtitle" data-en="Lata & Lotus Weaves" data-te="కమలం & లతా తీగలు">Lata & Lotus Weaves</div>
+                                <p class="card-description" data-en="Auspicious lotus blooms and sinuous botanical creepers symbolizing purity and grace in pure mulberry silk." data-te="పవిత్రమైన తామర పుష్పాలు మరియు పూల తీగలతో శోభిల్లే నిండైన పట్టు చీర.">
+                                    Auspicious lotus blooms and sinuous botanical creepers symbolizing purity and grace in pure mulberry silk.
+                                </p>
+                                <div class="card-action-row">
+                                    <button class="btn-card-explore" onclick="event.stopPropagation(); selectStyleAndGoStudio('Floral');" type="button">
+                                        <span data-en="Design With This Style" data-te="ఈ శైలితో రూపొందించండి">Design With This Style</span>
+                                        <span>➔</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Peacock Heritage -->
+                        <div class="collection-luxury-card" onclick="selectStyleAndGoStudio('Peacock')">
+                            <div class="card-visual-wrapper">
+                                <div class="card-bg-sheen" style="background: linear-gradient(135deg, #094743 0%, #0F766E 100%);"></div>
+                                <svg viewBox="0 0 100 100" class="card-motif-svg">
+                                    <path d="M50 55 C57 32 77 23 84 32 C80 45 64 59 50 55 Z" fill="#D4AF37"/>
+                                    <path d="M50 55 C64 36 86 36 88 47 C82 54 64 64 50 55 Z" fill="#094743"/>
+                                    <circle cx="36" cy="23" r="3.5" fill="#D4AF37"/>
+                                    <circle cx="41" cy="21" r="3.5" fill="#D4AF37"/>
+                                    <path d="M34 27 C30 32 30 38 36 43 C41 47 41 57 34 64 C27 68 32 77 41 77 C50 77 55 68 50 57 C45 50 45 41 41 36 Z" fill="#FBF0D2"/>
+                                    <polygon points="30,34 23,36 30,38" fill="#D4AF37"/>
+                                </svg>
+                                <span class="card-cluster-pill" data-en="Royal Mayuri" data-te="రాజరిక నెమలి">Royal Mayuri</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" data-en="Peacock Heritage" data-te="మయూరి హెరిటేజ్">Peacock Heritage</h3>
+                                <div class="card-subtitle" data-en="Mayuri Crest & Kattam" data-te="నెమలి పింఛం & గడులు">Mayuri Crest & Kattam</div>
+                                <p class="card-description" data-en="Regal peacock silhouettes woven in brilliant zari thread along traditional checkered kattam fields." data-te="రాజసమైన నెమలి ఆకృతులు మరియు సాంప్రదాయ కట్టం గడులతో కూడిన దివ్య శైలి.">
+                                    Regal peacock silhouettes woven in brilliant zari thread along traditional checkered kattam fields.
+                                </p>
+                                <div class="card-action-row">
+                                    <button class="btn-card-explore" onclick="event.stopPropagation(); selectStyleAndGoStudio('Peacock');" type="button">
+                                        <span data-en="Design With This Style" data-te="ఈ శైలితో రూపొందించండి">Design With This Style</span>
+                                        <span>➔</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Paisley Traditions -->
+                        <div class="collection-luxury-card" onclick="selectStyleAndGoStudio('Paisley/Mango')">
+                            <div class="card-visual-wrapper">
+                                <div class="card-bg-sheen" style="background: linear-gradient(135deg, #8A4B08 0%, #D97706 100%);"></div>
+                                <svg viewBox="0 0 100 100" class="card-motif-svg">
+                                    <path d="M50 18 C64 18 75 29 73 43 C70 56 54 72 41 79 C30 72 25 59 27 47 C29 34 36 25 45 20 C50 18 56 23 54 29 C52 34 47 32 45 29" fill="#4A0812" stroke="#D4AF37" stroke-width="3"/>
+                                    <path d="M45 38 C54 43 56 54 50 61 C45 65 36 61 36 54 C36 47 41 41 45 38 Z" fill="#D4AF37"/>
+                                    <circle cx="47" cy="52" r="3.5" fill="#4A0812"/>
+                                </svg>
+                                <span class="card-cluster-pill" data-en="Kalka Brocade" data-te="కల్కా మామిడి">Kalka Brocade</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" data-en="Paisley Traditions" data-te="మామిడి పిందే (కల్కా)">Paisley Traditions</h3>
+                                <div class="card-subtitle" data-en="Sacred Kalka & Jaal" data-te="మామిడి జాల్ అల్లిక">Sacred Kalka & Jaal</div>
+                                <p class="card-description" data-en="The revered Indian mango motif celebrating abundance, fruitfulness, and sacred celebrations in gold brocade." data-te="సమృద్ధికి చిహ్నమైన మామిడి పిందే మోటిఫ్ మరియు సువర్ణ జాల్ నెట్ ప్యాటర్న్.">
+                                    The revered Indian mango motif celebrating abundance, fruitfulness, and sacred celebrations in gold brocade.
+                                </p>
+                                <div class="card-action-row">
+                                    <button class="btn-card-explore" onclick="event.stopPropagation(); selectStyleAndGoStudio('Paisley/Mango');" type="button">
+                                        <span data-en="Design With This Style" data-te="ఈ శైలితో రూపొందించండి">Design With This Style</span>
+                                        <span>➔</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Temple Border Collection -->
+                        <div class="collection-luxury-card" onclick="selectStyleAndGoStudio('Temple Border')">
+                            <div class="card-visual-wrapper">
+                                <div class="card-bg-sheen" style="background: linear-gradient(135deg, #034834 0%, #047857 100%);"></div>
+                                <svg viewBox="0 0 100 100" class="card-motif-svg">
+                                    <path d="M14 77 L32 32 L50 77 Z" fill="#5C0B1B" stroke="#D4AF37" stroke-width="3"/>
+                                    <path d="M50 77 L68 32 L86 77 Z" fill="#5C0B1B" stroke="#D4AF37" stroke-width="3"/>
+                                    <path d="M23 77 L32 50 L41 77 Z" fill="#D4AF37"/>
+                                    <path d="M59 77 L68 50 L77 77 Z" fill="#D4AF37"/>
+                                    <circle cx="32" cy="25" r="4.5" fill="#D4AF37"/>
+                                    <circle cx="68" cy="25" r="4.5" fill="#D4AF37"/>
+                                    <rect x="10" y="77" width="80" height="9" fill="#D4AF37"/>
+                                </svg>
+                                <span class="card-cluster-pill" data-en="Korvai Nizam" data-te="కొర్వై నిజాం">Korvai Nizam</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" data-en="Temple Border Collection" data-te="గోపురం బోర్డర్ శైలి">Temple Border Collection</h3>
+                                <div class="card-subtitle" data-en="Nizam Gopuram Spires" data-te="దేవాలయ శిఖరాలు">Nizam Gopuram Spires</div>
+                                <p class="card-description" data-en="Sanctified triangular temple spires hand-interlocked through contrasting korvai weaves with antique zari luster." data-te="దేవాలయ గోపురాల త్రికోణ అంచులు మరియు కెంపు రంగు బోర్డర్ నేత శైలి.">
+                                    Sanctified triangular temple spires hand-interlocked through contrasting korvai weaves with antique zari luster.
+                                </p>
+                                <div class="card-action-row">
+                                    <button class="btn-card-explore" onclick="event.stopPropagation(); selectStyleAndGoStudio('Temple Border');" type="button">
+                                        <span data-en="Design With This Style" data-te="ఈ శైలితో రూపొందించండి">Design With This Style</span>
+                                        <span>➔</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Geometric Weaves -->
+                        <div class="collection-luxury-card" onclick="selectStyleAndGoStudio('Geometric')">
+                            <div class="card-visual-wrapper">
+                                <div class="card-bg-sheen" style="background: linear-gradient(135deg, #4A1575 0%, #6B21A8 100%);"></div>
+                                <svg viewBox="0 0 100 100" class="card-motif-svg">
+                                    <polygon points="50,14 82,50 50,86 18,50" fill="#4A0812" stroke="#D4AF37" stroke-width="3"/>
+                                    <polygon points="50,27 68,50 50,73 32,50" fill="#D4AF37"/>
+                                    <polygon points="50,38 59,50 50,62 41,50" fill="#4A1575"/>
+                                    <circle cx="50" cy="50" r="3.5" fill="#FFF"/>
+                                    <circle cx="18" cy="18" r="3.5" fill="#D4AF37"/>
+                                    <circle cx="82" cy="18" r="3.5" fill="#D4AF37"/>
+                                    <circle cx="18" cy="82" r="3.5" fill="#D4AF37"/>
+                                    <circle cx="82" cy="82" r="3.5" fill="#D4AF37"/>
+                                </svg>
+                                <span class="card-cluster-pill" data-en="Pochampally Ikat" data-te="పోచంపల్లి ఇకత్">Pochampally Ikat</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" data-en="Geometric Weaves" data-te="రేఖాగణిత ఇకత్ డైమండ్స్">Geometric Weaves</h3>
+                                <div class="card-subtitle" data-en="Ikat Diamonds & Chevrons" data-te="ఇకత్ గడులు & తరంగాలు">Ikat Diamonds & Chevrons</div>
+                                <p class="card-description" data-en="Mesmerizing resist-dyed stepped diamonds and chevron zig-zag waves originating from Pochampally's master artisans." data-te="పోచంపల్లి ఇకత్ నైపుణ్యంతో రూపుదిద్దుకున్న అద్భుతమైన డైమండ్ మరియు జిగ్-జాగ్ డిజైన్లు.">
+                                    Mesmerizing resist-dyed stepped diamonds and chevron zig-zag waves originating from Pochampally's master artisans.
+                                </p>
+                                <div class="card-action-row">
+                                    <button class="btn-card-explore" onclick="event.stopPropagation(); selectStyleAndGoStudio('Geometric');" type="button">
+                                        <span data-en="Design With This Style" data-te="ఈ శైలితో రూపొందించండి">Design With This Style</span>
+                                        <span>➔</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Andhra Handloom Heritage -->
+                        <div class="collection-luxury-card" onclick="selectStyleAndGoStudio('Traditional Andhra')">
+                            <div class="card-visual-wrapper">
+                                <div class="card-bg-sheen" style="background: linear-gradient(135deg, #3A050E 0%, #680E1C 100%);"></div>
+                                <svg viewBox="0 0 100 100" class="card-motif-svg">
+                                    <rect x="18" y="18" width="64" height="64" fill="#3A050E" stroke="#D4AF37" stroke-width="4"/>
+                                    <line x1="18" y1="50" x2="82" y2="50" stroke="#D4AF37" stroke-width="3"/>
+                                    <line x1="50" y1="18" x2="50" y2="82" stroke="#D4AF37" stroke-width="3"/>
+                                    <circle cx="34" cy="34" r="5" fill="#D4AF37"/>
+                                    <circle cx="66" cy="66" r="5" fill="#D4AF37"/>
+                                    <polygon points="66,28 71,34 66,40 61,34" fill="#FFF"/>
+                                    <polygon points="34,60 39,66 34,72 29,66" fill="#FFF"/>
+                                </svg>
+                                <span class="card-cluster-pill" data-en="Mangalagiri Heritage" data-te="మంగళగిరి ఘనత">Mangalagiri Heritage</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" data-en="Andhra Handloom Heritage" data-te="సాంప్రదాయ ఆంధ్ర పట్టు">Andhra Handloom Heritage</h3>
+                                <div class="card-subtitle" data-en="Mangalagiri & Uppada Silks" data-te="మంగళగిరి & ఉప్పాడ పట్టు">Mangalagiri & Uppada Silks</div>
+                                <p class="card-description" data-en="Timeless Andhra pattu sarees renowned for rich solid Nizam borders, delicate micro-buttis, and buttery mulberry silk." data-te="ఘనమైన నిజాం జరీ బోర్డర్ మరియు సన్నని బుటాలతో ప్రసిద్ధి చెందిన ఆంధ్ర చేనేత పట్టు చీర.">
+                                    Timeless Andhra pattu sarees renowned for rich solid Nizam borders, delicate micro-buttis, and buttery mulberry silk.
+                                </p>
+                                <div class="card-action-row">
+                                    <button class="btn-card-explore" onclick="event.stopPropagation(); selectStyleAndGoStudio('Traditional Andhra');" type="button">
+                                        <span data-en="Design With This Style" data-te="ఈ శైలితో రూపొందించండి">Design With This Style</span>
+                                        <span>➔</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Handloom Craftsmanship Section -->
+            <div class="craft-editorial-sec">
+                <div class="site-container">
+                    <div class="craft-editorial-grid">
+                        <div class="craft-narrative-col">
+                            <span class="sub-flourish">❖ THE WEAVER'S SOUL ❖</span>
+                            <h2 class="craft-headline" data-en="The Living Legacy of Indian Handlooms" data-te="భారతీయ చేనేత కళా వైభవం">
+                                The Living Legacy of Indian Handlooms
+                            </h2>
+                            <p class="craft-text" data-en="For over two millennia, the rhythm of the pit loom has echoed across India's artisan villages. Every warp thread and weft yarn represents generations of inherited craftsmanship, mathematical harmony, and deep spiritual reverence for natural textiles." data-te="రెండు వేల సంవత్సరాలకు పైగా భారతీయ గ్రామీణ ప్రాంతాలలో చేనేత మగ్గం సజీవ కళగా నిలిచింది. పడు, పేక దారాల కలయిక మన కళాకారుల ప్రతిభకు మరియు సంస్కృతికి నిదర్శనం.">
+                                For over two millennia, the rhythm of the pit loom has echoed across India's artisan villages. Every warp thread and weft yarn represents generations of inherited craftsmanship, mathematical harmony, and deep spiritual reverence for natural textiles.
+                            </p>
+                            <p class="craft-text" data-en="Our tool bridges the generational gap: empowering traditional master weavers with voice-activated artificial intelligence that synthesizes custom palettes, translates customer dreams from Telugu or English, and generates ready-to-weave jacquard punch card specifications." data-te="మా ప్రాజెక్ట్ చేనేత కార్మికులకు నూతన డిజైన్ల సృష్టిలో తోడ్పడుతుంది: తెలుగు లేదా ఇంగ్లీషులో వినియోగదారుల కోరికలను స్వీకరించి, క్షణాల్లో కస్టమ్ కలర్ ప్యాలెట్‌లు మరియు జాకార్డ్ స్పెక్స్‌ను అందిస్తుంది.">
+                                Our tool bridges the generational gap: empowering traditional master weavers with voice-activated artificial intelligence that synthesizes custom palettes, translates customer dreams from Telugu or English, and generates ready-to-weave jacquard punch card specifications.
+                            </p>
+
+                            <div class="craft-features-list">
+                                <div class="craft-feature-item">
+                                    <div class="feature-icon">🎙️</div>
+                                    <div class="feature-text">
+                                        <strong data-en="Bilingual Voice Synthesis" data-te="ద్విభాషా వాయిస్ ఇన్పుట్">Bilingual Voice Synthesis</strong>
+                                        <p data-en="Speak naturally in Telugu or English to direct motif choices and body hues." data-te="తెలుగు లేదా ఇంగ్లీషులో సులభంగా మాట్లాడి డిజైన్ వివరాలు చెప్పవచ్చు.">Speak naturally in Telugu or English to direct motif choices and body hues.</p>
+                                    </div>
+                                </div>
+                                <div class="craft-feature-item">
+                                    <div class="feature-icon">📜</div>
+                                    <div class="feature-text">
+                                        <strong data-en="Weaver Jacquard Specifications" data-te="మగ్గం జాకార్డ్ కొలతలు">Weaver Jacquard Specifications</strong>
+                                        <p data-en="Automatic yarn count metrics, reed/picks counts, and punch-card recommendations." data-te="పడు, పేక నూలు కౌంట్లు మరియు రీడ్/పిక్స్ ఖచ్చితమైన విశ్లేషణ.">Automatic yarn count metrics, reed/picks counts, and punch-card recommendations.</p>
+                                    </div>
+                                </div>
+                                <div class="craft-feature-item">
+                                    <div class="feature-icon">🎨</div>
+                                    <div class="feature-text">
+                                        <strong data-en="Artisanal Color Harmonies" data-te="సాంప్రదాయ రంగుల మేళవింపు">Artisanal Color Harmonies</strong>
+                                        <p data-en="Kempu crimson, pitambaram gold, peacock teal, and authentic antique zari luster." data-te="కెంపు ఎరుపు, పీతాంబరం, నెమలి పింఛం మరియు మేలైన జరీ కాంతులు.">Kempu crimson, pitambaram gold, peacock teal, and authentic antique zari luster.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Craftsmanship Visual Box -->
+                        <div class="craft-showcase-col">
+                            <div class="craft-box-frame">
+                                <div class="craft-box-header">
+                                    <span class="box-badge">CHENETHA MITRA CSP</span>
+                                    <h4>Community Service Initiative</h4>
+                                </div>
+                                <div class="craft-box-content">
+                                    <div class="cluster-badge-row">
+                                        <span class="cluster-pill">🏛️ Mangalagiri</span>
+                                        <span class="cluster-pill">💎 Uppada</span>
+                                        <span class="cluster-pill">🔷 Pochampally</span>
+                                        <span class="cluster-pill">📜 Venkatagiri</span>
+                                        <span class="cluster-pill">👑 Dharmavaram</span>
+                                    </div>
+                                    <blockquote class="craft-quote">
+                                        "When a weaver throws the shuttle, they are not merely threading silk; they are weaving the living cultural identity of our nation."
+                                    </blockquote>
+                                    <div class="quote-author">— Chenetha Artisan Guild Project</div>
+                                    <div class="craft-box-action">
+                                        <button class="btn-primary-luxury" onclick="navigateToPage('about')" type="button">
+                                            <span data-en="Read Full Story & Mission" data-te="పూర్తి వివరాలు చదవండి">Read Full Story & Mission</span>
+                                            <span>➔</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call-to-Action Section -->
+            <div class="cta-banner-sec">
+                <div class="site-container">
+                    <div class="cta-banner-card">
+                        <div class="cta-ornament-left">✦</div>
+                        <div class="cta-content">
+                            <h2 class="cta-title" data-en="Your Imagination. Your Weave." data-te="మీ ఊహాత్మక డిజైన్. మీ నేత చీర.">
+                                Your Imagination. Your Weave.
+                            </h2>
+                            <p class="cta-subtitle" data-en="Step into our digital handloom atelier. Express your dream saree through voice or text and watch the digital loom come to life with authentic jacquard specifications." data-te="మా డిజిటల్ చేనేత స్టూడియోలోకి ప్రవేశించండి. మీ మనసుకు నచ్చిన చీరను రూపొందించండి మరియు ప్రివ్యూను వీక్షించండి.">
+                                Step into our digital handloom atelier. Express your dream saree through voice or text and watch the digital loom come to life with authentic jacquard specifications.
+                            </p>
+                            <button class="btn-cta-gold" onclick="navigateToPage('studio')" type="button">
+                                <span>✨</span>
+                                <span data-en="Start Designing Now" data-te="ఇప్పుడే డిజైన్ చేయండి">Start Designing Now</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                        <div class="cta-ornament-right">✦</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+             PAGE TWO: EXPLORE DESIGNS
+             ========================================================= -->
+        <section id="page-explore" class="page-view">
+            <div class="site-container">
+                
+                <!-- Explore Page Header -->
+                <div class="page-title-banner">
+                    <span class="sub-flourish">❖ THE ATELIER ARCHIVE ❖</span>
+                    <h1 class="page-heading" data-en="Explore Handloom Saree Designs" data-te="చేనేత డిజైన్ల విశేష సేకరణ">
+                        Explore Handloom Saree Designs
+                    </h1>
+                    <p class="page-lead" data-en="A curated gallery of sacred motifs, auspicious borders, and royal color combinations from iconic South Indian weaving clusters." data-te="ఆంధ్రప్రదేశ్ మరియు దక్షిణ భారతదేశ ప్రముఖ చేనేత కేంద్రాల అపురూపమైన డిజైన్ల సమాహారం.">
+                        A curated gallery of sacred motifs, auspicious borders, and royal color combinations from iconic South Indian weaving clusters.
+                    </p>
+                </div>
+
+                <!-- Gallery Category Filter Pills -->
+                <div class="gallery-filter-bar">
+                    <button class="filter-pill active" onclick="filterGallery('all', this)" type="button">
+                        <span data-en="All Collections" data-te="అన్నీ">All Collections</span>
+                    </button>
+                    <button class="filter-pill" onclick="filterGallery('Floral', this)" type="button">
+                        <span data-en="Floral Elegance" data-te="పూల డిజైన్లు">Floral Elegance</span>
+                    </button>
+                    <button class="filter-pill" onclick="filterGallery('Peacock', this)" type="button">
+                        <span data-en="Peacock Heritage" data-te="మయూరి మోటిఫ్‌లు">Peacock Heritage</span>
+                    </button>
+                    <button class="filter-pill" onclick="filterGallery('Paisley', this)" type="button">
+                        <span data-en="Paisley Traditions" data-te="మామిడి పిందేలు">Paisley Traditions</span>
+                    </button>
+                    <button class="filter-pill" onclick="filterGallery('Temple', this)" type="button">
+                        <span data-en="Temple Borders" data-te="గోపురం బోర్డర్లు">Temple Borders</span>
+                    </button>
+                    <button class="filter-pill" onclick="filterGallery('Geometric', this)" type="button">
+                        <span data-en="Geometric Ikat" data-te="ఇకత్ డైమండ్స్">Geometric Ikat</span>
+                    </button>
+                    <button class="filter-pill" onclick="filterGallery('Andhra', this)" type="button">
+                        <span data-en="Andhra Heritage" data-te="ఆంధ్ర పట్టు">Andhra Heritage</span>
+                    </button>
+                </div>
+
+                <!-- Gallery Showcase Grid -->
+                <div class="gallery-grid" id="exploreGalleryGrid">
+                    
+                    <!-- Item 1: Floral -->
+                    <div class="gallery-card" data-category="Floral">
+                        <div class="gallery-visual" style="background: linear-gradient(135deg, #4A0812 0%, #7B1425 100%);">
+                            <svg viewBox="0 0 120 120" class="gallery-card-svg">
+                                <circle cx="60" cy="60" r="14" fill="#D4AF37"/>
+                                <path d="M60 20 C48 38 48 48 60 48 C72 48 72 38 60 20 Z M60 100 C48 82 48 72 60 72 C72 72 72 82 60 100 Z M20 60 C38 48 48 48 48 60 C48 72 38 72 20 60 Z M100 60 C82 48 72 48 72 60 C72 72 82 72 100 60 Z" fill="#FBF0D2"/>
+                                <circle cx="60" cy="60" r="6" fill="#4A0812"/>
+                            </svg>
+                            <span class="gallery-tag">Mulberry Silk</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="gallery-category-label">Floral Elegance</span>
+                            <h3 class="gallery-item-title" data-en="Royal Lata & Lotus Brocade" data-te="కెంపు కమల పట్టు చీర">Royal Lata & Lotus Brocade</h3>
+                            <p class="gallery-item-desc" data-en="Rich crimson base with cascading gold floral vines, double zari borders, and chakra medallion pallu." data-te="కెంపు రంగు పట్టు బాడీ, సువర్ణ లత పూల తీగలు, ద్వంద్వ జరీ బోర్డర్.">
+                                Rich crimson base with cascading gold floral vines, double zari borders, and chakra medallion pallu.
+                            </p>
+                            <div class="gallery-meta-specs">
+                                <span>🧵 2/120s Mulberry Silk</span>
+                                <span>🏛️ Mangalagiri Cluster</span>
+                            </div>
+                            <button class="btn-create-similar" onclick="selectStyleAndGoStudio('Floral')" type="button">
+                                <span>✨</span>
+                                <span data-en="Create a Similar Design" data-te="ఇదే శైలిలో రూపొందించండి">Create a Similar Design</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Peacock -->
+                    <div class="gallery-card" data-category="Peacock">
+                        <div class="gallery-visual" style="background: linear-gradient(135deg, #094743 0%, #0F766E 100%);">
+                            <svg viewBox="0 0 120 120" class="gallery-card-svg">
+                                <path d="M60 66 C68 38 92 27 100 38 C96 54 76 70 60 66 Z" fill="#D4AF37"/>
+                                <path d="M60 66 C76 43 103 43 105 56 C98 64 76 76 60 66 Z" fill="#094743"/>
+                                <circle cx="43" cy="27" r="4" fill="#D4AF37"/>
+                                <circle cx="49" cy="25" r="4" fill="#D4AF37"/>
+                                <path d="M41 32 C36 38 36 45 43 51 C49 56 49 68 41 77 C32 82 38 92 49 92 C60 92 66 82 60 68 C54 60 54 49 49 43 Z" fill="#FBF0D2"/>
+                                <polygon points="36,41 27,43 36,46" fill="#D4AF37"/>
+                            </svg>
+                            <span class="gallery-tag">Peacock Teal</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="gallery-category-label">Peacock Heritage</span>
+                            <h3 class="gallery-item-title" data-en="Imperial Mayuri Kattam" data-te="మయూరి కట్టం గడులు">Imperial Mayuri Kattam</h3>
+                            <p class="gallery-item-desc" data-en="Peacock teal body overlaid with zari checks, regal peacock procession borders, and rich crimson pallu." data-te="నెమలి పింఛం రంగు బాడీ, జరీ గడులు, నెమలి పట్టీ బోర్డర్ మరియు కెంపు పల్లూ.">
+                                Peacock teal body overlaid with zari checks, regal peacock procession borders, and rich crimson pallu.
+                            </p>
+                            <div class="gallery-meta-specs">
+                                <span>🧵 20/22 Denier Silk</span>
+                                <span>🏛️ Uppada Jamdani</span>
+                            </div>
+                            <button class="btn-create-similar" onclick="selectStyleAndGoStudio('Peacock')" type="button">
+                                <span>✨</span>
+                                <span data-en="Create a Similar Design" data-te="ఇదే శైలిలో రూపొందించండి">Create a Similar Design</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Paisley -->
+                    <div class="gallery-card" data-category="Paisley">
+                        <div class="gallery-visual" style="background: linear-gradient(135deg, #78350F 0%, #D97706 100%);">
+                            <svg viewBox="0 0 120 120" class="gallery-card-svg">
+                                <path d="M60 21 C76 21 90 34 87 51 C84 67 64 86 49 94 C36 86 30 70 32 56 C34 40 43 30 54 24 C60 21 67 27 64 34 C62 40 56 38 54 34" fill="#4A0812" stroke="#D4AF37" stroke-width="3"/>
+                                <path d="M54 45 C64 51 67 64 60 73 C54 78 43 73 43 64 C43 56 49 49 54 45 Z" fill="#D4AF37"/>
+                                <circle cx="56" cy="62" r="4" fill="#4A0812"/>
+                            </svg>
+                            <span class="gallery-tag">Mustard Gold</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="gallery-category-label">Paisley Traditions</span>
+                            <h3 class="gallery-item-title" data-en="Sacred Kalka Brocade" data-te="కల్కా మామిడి బ్రొకేడ్">Sacred Kalka Brocade</h3>
+                            <p class="gallery-item-desc" data-en="Warm mustard gold ground with intricate paisley lattice jaal and contrasting wine maroon borders." data-te="పసుపు బంగారు బాడీ, మామిడి పిందే జాల్ అల్లిక, మరియు డీప్ మెరూన్ బోర్డర్.">
+                                Warm mustard gold ground with intricate paisley lattice jaal and contrasting wine maroon borders.
+                            </p>
+                            <div class="gallery-meta-specs">
+                                <span>🧵 Pure Silk Jacquard</span>
+                                <span>🏛️ Venkatagiri Cluster</span>
+                            </div>
+                            <button class="btn-create-similar" onclick="selectStyleAndGoStudio('Paisley/Mango')" type="button">
+                                <span>✨</span>
+                                <span data-en="Create a Similar Design" data-te="ఇదే శైలిలో రూపొందించండి">Create a Similar Design</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Temple Border -->
+                    <div class="gallery-card" data-category="Temple">
+                        <div class="gallery-visual" style="background: linear-gradient(135deg, #034834 0%, #047857 100%);">
+                            <svg viewBox="0 0 120 120" class="gallery-card-svg">
+                                <path d="M16 92 L38 38 L60 92 Z" fill="#4A0812" stroke="#D4AF37" stroke-width="3"/>
+                                <path d="M60 92 L82 38 L104 92 Z" fill="#4A0812" stroke="#D4AF37" stroke-width="3"/>
+                                <path d="M27 92 L38 60 L49 92 Z" fill="#D4AF37"/>
+                                <path d="M71 92 L82 60 L93 92 Z" fill="#D4AF37"/>
+                                <circle cx="38" cy="30" r="5" fill="#D4AF37"/>
+                                <circle cx="82" cy="30" r="5" fill="#D4AF37"/>
+                                <rect x="12" y="92" width="96" height="10" fill="#D4AF37"/>
+                            </svg>
+                            <span class="gallery-tag">Emerald Silk</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="gallery-category-label">Temple Borders</span>
+                            <h3 class="gallery-item-title" data-en="Nizam Gopuram Spire Silk" data-te="నిజాం గోపురం పట్టు">Nizam Gopuram Spire Silk</h3>
+                            <p class="gallery-item-desc" data-en="Lush emerald body featuring traditional temple spires, cascading gopuram pallu, and rich zari work." data-te="పచ్చటి బాడీ, త్రికోణ గోపురం అంచులు, మరియు రాజసమైన జరీ కొంగు.">
+                                Lush emerald body featuring traditional temple spires, cascading gopuram pallu, and rich zari work.
+                            </p>
+                            <div class="gallery-meta-specs">
+                                <span>🧵 2/120s Mulberry Silk</span>
+                                <span>🏛️ Mangalagiri Weave</span>
+                            </div>
+                            <button class="btn-create-similar" onclick="selectStyleAndGoStudio('Temple Border')" type="button">
+                                <span>✨</span>
+                                <span data-en="Create a Similar Design" data-te="ఇదే శైలిలో రూపొందించండి">Create a Similar Design</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Geometric Ikat -->
+                    <div class="gallery-card" data-category="Geometric">
+                        <div class="gallery-visual" style="background: linear-gradient(135deg, #4A1575 0%, #6B21A8 100%);">
+                            <svg viewBox="0 0 120 120" class="gallery-card-svg">
+                                <polygon points="60,16 98,60 60,104 22,60" fill="#4A0812" stroke="#D4AF37" stroke-width="3"/>
+                                <polygon points="60,32 82,60 60,88 38,60" fill="#D4AF37"/>
+                                <polygon points="60,45 71,60 60,75 49,60" fill="#4A1575"/>
+                                <circle cx="60" cy="60" r="4" fill="#FFF"/>
+                            </svg>
+                            <span class="gallery-tag">Pochampally Ikat</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="gallery-category-label">Geometric Weaves</span>
+                            <h3 class="gallery-item-title" data-en="Pochampally Diamond Ikat" data-te="పోచంపల్లి ఇకత్ డైమండ్స్">Pochampally Diamond Ikat</h3>
+                            <p class="gallery-item-desc" data-en="Pitambaram gold and royal purple double-ikat with precision resist-dyed diamond lattice and wave borders." data-te="పీతాంబరం మరియు వంగపువ్వు రంగుల అల్లిక, ఇకత్ డైమండ్ డిజైన్.">
+                                Pitambaram gold and royal purple double-ikat with precision resist-dyed diamond lattice and wave borders.
+                            </p>
+                            <div class="gallery-meta-specs">
+                                <span>🧵 2/100s Mercerized Cotton/Silk</span>
+                                <span>🏛️ Pochampally Park</span>
+                            </div>
+                            <button class="btn-create-similar" onclick="selectStyleAndGoStudio('Geometric')" type="button">
+                                <span>✨</span>
+                                <span data-en="Create a Similar Design" data-te="ఇదే శైలిలో రూపొందించండి">Create a Similar Design</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Andhra Heritage -->
+                    <div class="gallery-card" data-category="Andhra">
+                        <div class="gallery-visual" style="background: linear-gradient(135deg, #3A050E 0%, #680E1C 100%);">
+                            <svg viewBox="0 0 120 120" class="gallery-card-svg">
+                                <rect x="22" y="22" width="76" height="76" fill="#3A050E" stroke="#D4AF37" stroke-width="4"/>
+                                <line x1="22" y1="60" x2="98" y2="60" stroke="#D4AF37" stroke-width="3"/>
+                                <line x1="60" y1="22" x2="60" y2="98" stroke="#D4AF37" stroke-width="3"/>
+                                <circle cx="41" cy="41" r="6" fill="#D4AF37"/>
+                                <circle cx="79" cy="79" r="6" fill="#D4AF37"/>
+                                <polygon points="79,34 85,41 79,48 73,41" fill="#FFF"/>
+                                <polygon points="41,72 47,79 41,86 35,79" fill="#FFF"/>
+                            </svg>
+                            <span class="gallery-tag">Bridal Silk</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="gallery-category-label">Andhra Heritage</span>
+                            <h3 class="gallery-item-title" data-en="Heritage Mangalagiri Zari Checks" data-te="మంగళగిరి జరీ గడుల పట్టు">Heritage Mangalagiri Zari Checks</h3>
+                            <p class="gallery-item-desc" data-en="Classic Andhra checks with shimmering micro-buttis, heavy antique gold borders, and rich raw silk drape." data-te="సాంప్రదాయ గడులు, సన్నటి జరీ బుటాలు, మరియు మేలిమి బంగారు అంచులు.">
+                                Classic Andhra checks with shimmering micro-buttis, heavy antique gold borders, and rich raw silk drape.
+                            </p>
+                            <div class="gallery-meta-specs">
+                                <span>🧵 2/120s Pure Silk</span>
+                                <span>🏛️ Andhra Handloom</span>
+                            </div>
+                            <button class="btn-create-similar" onclick="selectStyleAndGoStudio('Traditional Andhra')" type="button">
+                                <span>✨</span>
+                                <span data-en="Create a Similar Design" data-te="ఇదే శైలిలో రూపొందించండి">Create a Similar Design</span>
+                                <span>➔</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             PAGE THREE: DESIGN STUDIO (BESPOKE ATELIER WORKSPACE)
+             ========================================================= -->
+        <section id="page-studio" class="page-view">
+            <div class="site-container studio-container">
+                
+                <!-- Studio Page Header -->
+                <div class="studio-header">
+                    <div class="studio-header-titles">
+                        <span class="sub-flourish">❖ BESPOKE HANDLOOM ATELIER ❖</span>
+                        <h1 class="studio-title" data-en="Handloom Design Studio" data-te="చేనేత డిజైన్ స్టూడియో">Handloom Design Studio</h1>
+                        <p class="studio-lead" data-en="Express your concept using voice or text, customize body and border hues, and synthesize your saree with real-time jacquard weaving specs." data-te="వాయిస్ లేదా టెక్స్ట్ ద్వారా వివరాలు చెప్పండి, రంగులు & ప్యాటర్న్లు ఎంచుకోండి, తక్షణమే మీ చీరను వీక్షించండి.">
+                            Express your concept using voice or text, customize body and border hues, and synthesize your saree with real-time jacquard weaving specs.
+                        </p>
+                    </div>
+
+                    <!-- Studio Top Actions -->
+                    <div class="studio-header-actions">
+                        <button class="btn-secondary-luxury" onclick="navigateToPage('explore')" type="button">
+                            <span>📚</span>
+                            <span data-en="Browse Archive" data-te="సేకరణలు చూడండి">Browse Archive</span>
+                        </button>
+                        <button class="btn-secondary-luxury" onclick="navigateToPage('home')" type="button">
+                            <span>🏠</span>
+                            <span data-en="Home" data-te="హోమ్">Home</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Studio Dual-Panel Workspace -->
+                <div class="studio-workspace-grid">
+                    
+                    <!-- =============================================
+                         LEFT SIDE: DESIGN INPUTS
+                         ============================================= -->
+                    <div class="studio-panel studio-inputs-panel">
+                        <div class="panel-inner-card">
+                            
+                            <!-- 1. Style Selection Tabs -->
+                            <div class="input-group-sec">
+                                <label class="input-sec-label">
+                                    <span class="label-gem">✦</span>
+                                    <span data-en="1. Choose Saree Category" data-te="1. శైలిని ఎంచుకోండి">1. Choose Saree Category</span>
+                                </label>
+                                <div class="style-pills-row" id="styleCardsGrid">
+                                    <button class="style-pill active" data-style="Floral" onclick="selectStyleCard(this, 'Floral')" type="button">
+                                        <span>🌸</span>
+                                        <span data-en="Floral" data-te="పూల డిజైన్">Floral</span>
+                                    </button>
+                                    <button class="style-pill" data-style="Peacock" onclick="selectStyleCard(this, 'Peacock')" type="button">
+                                        <span>🦚</span>
+                                        <span data-en="Peacock" data-te="నెమలి">Peacock</span>
+                                    </button>
+                                    <button class="style-pill" data-style="Paisley/Mango" onclick="selectStyleCard(this, 'Paisley/Mango')" type="button">
+                                        <span>🥭</span>
+                                        <span data-en="Paisley" data-te="మామిడి">Paisley</span>
+                                    </button>
+                                    <button class="style-pill" data-style="Temple Border" onclick="selectStyleCard(this, 'Temple Border')" type="button">
+                                        <span>🏛️</span>
+                                        <span data-en="Temple" data-te="గోపురం">Temple</span>
+                                    </button>
+                                    <button class="style-pill" data-style="Geometric" onclick="selectStyleCard(this, 'Geometric')" type="button">
+                                        <span>🔷</span>
+                                        <span data-en="Geometric" data-te="ఇకత్">Geometric</span>
+                                    </button>
+                                    <button class="style-pill" data-style="Traditional Andhra" onclick="selectStyleCard(this, 'Traditional Andhra')" type="button">
+                                        <span>🧵</span>
+                                        <span data-en="Andhra" data-te="ఆంధ్ర">Andhra</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 2. Voice & Text Requirement Input -->
+                            <div class="input-group-sec">
+                                <div class="prompt-header-row">
+                                    <label class="input-sec-label" for="promptInput">
+                                        <span class="label-gem">🎙️</span>
+                                        <span data-en="2. Describe Your Dream Saree" data-te="2. మీ చీర వివరాలు చెప్పండి/రాయండి">2. Describe Your Dream Saree</span>
+                                    </label>
+                                    <span class="bilingual-badge" data-en="Telugu & English Supported" data-te="తెలుగు & ఇంగ్లీష్ మద్దతు">Telugu & English Supported</span>
+                                </div>
+
+                                <div class="atelier-textarea-wrapper">
+                                    <textarea id="promptInput" class="atelier-textarea" rows="3" placeholder="Speak or type your custom requirement... (e.g. Grand wedding saree in crimson red with gold peacock motif and temple border / పెళ్లి కోసం నెమలి మోటిఫ్ కెంపు రంగు పట్టు చీర)"></textarea>
+                                    
+                                    <!-- Microphone Button -->
+                                    <div class="mic-atelier-wrapper">
+                                        <button id="micBtn" class="mic-atelier-btn" title="Click to speak (Telugu / English)" type="button">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                                <line x1="12" y1="19" x2="12" y2="23"></line>
+                                                <line x1="8" y1="23" x2="16" y2="23"></line>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Speech Status Bar -->
+                                <div id="speechStatus" class="speech-status-bar">
+                                    <span>Click microphone to speak in Telugu or English.</span>
+                                </div>
+
+                                <!-- Sample Prompt Chips -->
+                                <div class="sample-chips-sec">
+                                    <span class="chips-label" data-en="Inspiration Prompts:" data-te="నమూనాలు:">Inspiration Prompts:</span>
+                                    <div class="chips-flex">
+                                        <button class="prompt-chip" onclick="useSamplePrompt('Grand wedding silk saree with crimson body, gold peacock motif, and rich temple border', 'పెళ్లి కోసం కెంపు రంగు పట్టు చీర, బంగారు నెమలి మోటిఫ్, గుడి బోర్డర్')" type="button">
+                                            👰 Wedding Peacock
+                                        </button>
+                                        <button class="prompt-chip" onclick="useSamplePrompt('Mangalagiri soft cotton saree with emerald green body and gold zari Nizam border', 'మంగళగిరి కాటన్ చీర పచ్చ రంగు బాడీ మరియు జరీ నిజాం బోర్డర్')" type="button">
+                                            🏛️ Mangalagiri Green
+                                        </button>
+                                        <button class="prompt-chip" onclick="useSamplePrompt('Uppada Jamdani silk with peacock teal body and mango kalika motifs', 'ఉప్పాడ జమ్‌దానీ పట్టు చీర నెమలి పారదర్శక రంగు మరియు మామిడి పిందేలు')" type="button">
+                                            💎 Uppada Jamdani
+                                        </button>
+                                        <button class="prompt-chip" onclick="useSamplePrompt('Pochampally Ikat geometric diamond pattern in pitambaram yellow and royal purple', 'పోచంపల్లి ఇకత్ డైమండ్ ప్యాటర్న్ పసుపు మరియు వంగపువ్వు రంగు బోర్డర్')" type="button">
+                                            🔷 Pochampally Ikat
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Primary Synthesis Action: Direct Generation without prior manual choices -->
+                            <div class="studio-generate-action">
+                                <button id="generateBtn" class="btn-generate-atelier" type="button">
+                                    <span class="gen-star">✦</span>
+                                    <span data-en="Generate My Design" data-te="నా డిజైన్‌ను రూపొందించండి">Generate My Design</span>
+                                    <span class="gen-arrow">➔</span>
+                                </button>
+                            </div>
+
+                            <!-- =========================================================
+                                 POST-GENERATION CUSTOMIZATION ATELIER
+                                 Revealed immediately after the saree is generated.
+                                 Allows live fine-tuning of colors, motifs, borders & pallu.
+                                 ========================================================= -->
+                            <div class="post-generation-customization" id="postGenerationCustomization" style="display: none;">
+                                
+                                <div class="customization-header-banner">
+                                    <div class="customization-badge">
+                                        <span class="badge-gem">✨</span>
+                                        <span data-en="Design Synthesized • Live Customization" data-te="డిజైన్ సిద్ధమైంది • ప్రత్యక్ష మార్పులు">Design Synthesized • Live Customization</span>
+                                    </div>
+                                    <h3 class="customization-title" data-en="Fine-Tune Your Saree Design" data-te="మీ చీర రంగులు & ప్యాటర్న్లు మార్చుకోండి">Fine-Tune Your Saree Design</h3>
+                                    <p class="customization-sub" data-en="Fine-tune your colors, motifs, borders, and pallu below. Saree preview updates in real-time." data-te="రంగులు, మోటిఫ్‌లు, బోర్డర్లు మరియు పల్లూను మీ ఇష్టానుసారం మార్చుకోండి. మగ్గం వీక్షణ వెంటనే అప్డేట్ అవుతుంది.">
+                                        Fine-tune your colors, motifs, borders, and pallu below. Saree preview updates in real-time.
+                                    </p>
+                                </div>
+
+                                <!-- 1. Color Customization (Body, Border, Pallu, Zari) -->
+                                <div class="input-group-sec custom-group-card">
+                                    <div class="custom-group-title-row">
+                                        <label class="input-sec-label">
+                                            <span class="label-gem">🎨</span>
+                                            <span data-en="Customize Saree Colors" data-te="రంగుల ఎంపిక మార్పు">Customize Saree Colors</span>
+                                        </label>
+                                        <span class="realtime-pill">⚡ Instant Live Update</span>
+                                    </div>
+                                    
+                                    <div class="palette-swatch-grid">
+                                        <div class="swatch-picker-card">
+                                            <label for="bodyColorPicker" data-en="Body Color" data-te="బాడీ రంగు">Body Color</label>
+                                            <div class="picker-inner">
+                                                <input type="color" id="bodyColorPicker" class="color-dot-input" value="#800020">
+                                                <span class="hex-readout" id="bodyHexTag">#800020</span>
+                                            </div>
+                                        </div>
+                                        <div class="swatch-picker-card">
+                                            <label for="borderColorPicker" data-en="Border Color" data-te="బోర్డర్ రంగు">Border Color</label>
+                                            <div class="picker-inner">
+                                                <input type="color" id="borderColorPicker" class="color-dot-input" value="#D97706">
+                                                <span class="hex-readout" id="borderHexTag">#D97706</span>
+                                            </div>
+                                        </div>
+                                        <div class="swatch-picker-card">
+                                            <label for="palluColorPicker" data-en="Pallu Color" data-te="పల్లూ రంగు">Pallu Color</label>
+                                            <div class="picker-inner">
+                                                <input type="color" id="palluColorPicker" class="color-dot-input" value="#991B1B">
+                                                <span class="hex-readout" id="palluHexTag">#991B1B</span>
+                                            </div>
+                                        </div>
+                                        <div class="swatch-picker-card">
+                                            <label for="zariColorPicker" data-en="Zari Metal Tone" data-te="జరీ మెరుపు">Zari Metal Tone</label>
+                                            <div class="picker-inner">
+                                                <input type="color" id="zariColorPicker" class="color-dot-input" value="#FBBF24">
+                                                <span class="hex-readout" id="zariHexTag">#FBBF24</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Quick Traditional Palettes -->
+                                    <div class="quick-harmonies-row">
+                                        <span class="quick-harmonies-label" data-en="Traditional Handloom Palettes:" data-te="సాంప్రదాయ రంగుల మేళవింపు:">Traditional Handloom Palettes:</span>
+                                        <div class="quick-harmonies-flex">
+                                            <button type="button" class="harmony-chip" onclick="applyColorPalette('#800020', '#D97706', '#991B1B', '#FBBF24', 'Bridal Crimson & Gold')">
+                                                <span class="chip-dot" style="background:#800020;"></span>
+                                                <span class="chip-dot" style="background:#D97706;"></span>
+                                                Crimson & Gold
+                                            </button>
+                                            <button type="button" class="harmony-chip" onclick="applyColorPalette('#0F766E', '#800020', '#800020', '#FBBF24', 'Peacock Teal & Crimson')">
+                                                <span class="chip-dot" style="background:#0F766E;"></span>
+                                                <span class="chip-dot" style="background:#800020;"></span>
+                                                Peacock Teal
+                                            </button>
+                                            <button type="button" class="harmony-chip" onclick="applyColorPalette('#047857', '#991B1B', '#7B1425', '#FBBF24', 'Emerald & Ruby')">
+                                                <span class="chip-dot" style="background:#047857;"></span>
+                                                <span class="chip-dot" style="background:#991B1B;"></span>
+                                                Emerald & Ruby
+                                            </button>
+                                            <button type="button" class="harmony-chip" onclick="applyColorPalette('#EAB308', '#6B21A8', '#6B21A8', '#FBBF24', 'Pitambaram & Purple')">
+                                                <span class="chip-dot" style="background:#EAB308;"></span>
+                                                <span class="chip-dot" style="background:#6B21A8;"></span>
+                                                Pitambaram Gold
+                                            </button>
+                                            <button type="button" class="harmony-chip" onclick="applyColorPalette('#FAF7F2', '#800020', '#800020', '#D97706', 'Ivory & Kempu')">
+                                                <span class="chip-dot" style="background:#FAF7F2; border:1px solid #CCC;"></span>
+                                                <span class="chip-dot" style="background:#800020;"></span>
+                                                Ivory Silk
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2. Motif, Border & Pallu Customization -->
+                                <div class="input-group-sec custom-group-card">
+                                    <label class="input-sec-label">
+                                        <span class="label-gem">📜</span>
+                                        <span data-en="Customize Motifs, Borders & Pallu" data-te="మోటిఫ్‌లు, బోర్డర్లు & పల్లూ మార్చండి">Customize Motifs, Borders & Pallu</span>
+                                    </label>
+
+                                    <div class="atelier-select-grid">
+                                        <div class="atelier-select-col">
+                                            <label for="motifSelect" data-en="Motif Symbol" data-te="మోటిఫ్ రకం">Motif Symbol</label>
+                                            <select id="motifSelect" class="atelier-select">
+                                                <option value="peacock">🦚 Peacock (నెమలి / మయూరి)</option>
+                                                <option value="mango">🥭 Mango / Paisley (మామిడి / కల్కా)</option>
+                                                <option value="lotus">🪷 Lotus (తామర పూవు / కమల)</option>
+                                                <option value="temple">🏛️ Temple Gopuram (గోపురం)</option>
+                                                <option value="ikat">🔷 Geometric Ikat Diamond (ఇకత్)</option>
+                                                <option value="elephant">🐘 Elephant (ఏనుగు / గజ)</option>
+                                                <option value="swan">🦢 Swan (హంస)</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="atelier-select-col">
+                                            <label for="borderSelect" data-en="Border Architecture" data-te="బోర్డర్ శైలి">Border Architecture</label>
+                                            <select id="borderSelect" class="atelier-select">
+                                                <option value="temple">🏛️ Temple Gopuram Spikes (గోపురం)</option>
+                                                <option value="double_zari">✨ Double Zari Floral (ద్వంద్వ జరీ)</option>
+                                                <option value="peacock_border">🦚 Peacock Silhouette (నెమలి పట్టీ)</option>
+                                                <option value="ikat_wave">🌊 Geometric Ikat Waves (ఇకత్)</option>
+                                                <option value="chevron_pattern">⚡ Chevron Zig-Zag (జిగ్-జాగ్)</option>
+                                                <option value="zari_stripes">📜 Fine Zari Pin Stripes (సన్న జరీ)</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="atelier-select-col">
+                                            <label for="palluSelect" data-en="Grand Pallu Design" data-te="పల్లూ డిజైన్">Grand Pallu Design</label>
+                                            <select id="palluSelect" class="atelier-select">
+                                                <option value="grand_medallion">🏵️ Grand Chakra Medallion (చక్ర పల్లూ)</option>
+                                                <option value="decorative_pallu">🌸 Decorative Floral Panel (పూల కొంగు)</option>
+                                                <option value="cascade_temple">🏛️ Cascading Temple Gopuram (గోపురాలు)</option>
+                                                <option value="traditional_stripes">📜 Traditional Zari Stripes (పట్టీల కొంగు)</option>
+                                                <option value="ikat_block">🔷 Geometric Ikat Blocked (ఇకత్ పల్లూ)</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="atelier-select-col">
+                                            <label for="bodyPatternSelect" data-en="Body Pattern Weave" data-te="బాడీ ప్యాటర్న్">Body Pattern Weave</label>
+                                            <select id="bodyPatternSelect" class="atelier-select">
+                                                <option value="floral_vines">🌸 Floral Vines (పూల తీగలు / లత)</option>
+                                                <option value="checks">🏁 Geometric Checks / Kattam (గడులు)</option>
+                                                <option value="lattice">🔷 Diamond Lattice / Jaal (వల డిజైన్)</option>
+                                                <option value="paisley_lattice">🥭 Paisley Grid Lattice (మామిడి జాల్)</option>
+                                                <option value="diagonal_ikat">📐 Diagonal Ikat Lines (క్రాస్ గీతలు)</option>
+                                                <option value="stripes">📜 Fine Zari Stripes (జరీ గీతలు)</option>
+                                                <option value="scattered_buttis">✨ Scattered Buttis (చల్లు బుటాలు)</option>
+                                                <option value="solid">🧵 Solid Plain Base (సాదా పట్టు)</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="atelier-select-col">
+                                            <label for="densitySelect" data-en="Motif Density" data-te="మోటిఫ్ సాంద్రత">Motif Density</label>
+                                            <select id="densitySelect" class="atelier-select">
+                                                <option value="Sparse">Sparse (తక్కువ)</option>
+                                                <option value="Medium" selected>Medium (మధ్యస్థం)</option>
+                                                <option value="Dense">Dense (ఎక్కువ)</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="atelier-select-col">
+                                            <label for="fabricSelect" data-en="Fabric Base" data-te="నూలు రకం">Fabric Base</label>
+                                            <select id="fabricSelect" class="atelier-select">
+                                                <option value="Silk">Mulberry Pure Silk (పట్టు)</option>
+                                                <option value="Cotton">Mercerized Cotton (కాటన్)</option>
+                                                <option value="Tussar">Tussar Silk (తుస్సార్)</option>
+                                                <option value="Organza">Organza (లైట్‌వేట్)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Post-Generation Quick Actions -->
+                                <div class="customization-actions-row">
+                                    <button type="button" class="btn-generate-variation" onclick="generateAnotherDesign()" title="Click to produce a visibly different pattern combination">
+                                        <span>🎲</span>
+                                        <span data-en="Generate Another Variation" data-te="మరో వైవిధ్య డిజైన్">Generate Another Variation</span>
+                                    </button>
+                                    <button type="button" class="btn-save-inline" onclick="saveDesign()">
+                                        <span>💾</span>
+                                        <span data-en="Save Design" data-te="దాచండి">Save Design</span>
+                                    </button>
+                                    <button type="button" class="btn-download-inline" onclick="downloadCanvasPNG()">
+                                        <span>🖼️</span>
+                                        <span data-en="Download Image" data-te="డౌన్‌లోడ్">Download Image</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- =============================================
+                         RIGHT SIDE: DESIGN PREVIEW (ONE LARGE SAREE)
+                         ============================================= -->
+                    <div class="studio-panel studio-preview-panel">
+                        <div class="panel-inner-card preview-card-inner">
+                            
+                            <!-- Preview Top Toolbar -->
+                            <div class="preview-atelier-toolbar">
+                                <div class="preview-title-col">
+                                    <span class="preview-atelier-badge" data-en="Live Digital Loom" data-te="ప్రత్యక్ష వీక్షణ">Live Digital Loom</span>
+                                    <h3 class="preview-heading" data-en="Saree Weave Preview" data-te="చీర రూప ప్రత్యక్ష వీక్షణ">Saree Weave Preview</h3>
+                                </div>
+
+                                <div class="preview-actions-col">
+                                    <!-- View Mode Toggles -->
+                                    <div class="atelier-view-toggles">
+                                        <button class="view-pill active" id="viewFlatBtn" onclick="setViewMode('flat')" type="button">Flat Weave</button>
+                                        <button class="view-pill" id="viewDrapeBtn" onclick="setViewMode('drape')" type="button">Drape View</button>
+                                        <button class="view-pill" id="viewZoomBtn" onclick="setViewMode('zoom')" type="button">Zoom Motif</button>
+                                    </div>
+
+                                    <!-- Generate Another Design Button -->
+                                    <button id="generateAnotherBtn" class="btn-generate-variation" title="Click to produce a visibly different pattern combination" type="button">
+                                        <span>🎲</span>
+                                        <span data-en="Generate Another Design" data-te="మరో వైవిధ్య డిజైన్">Generate Another Design</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Single Large Canvas Workspace -->
+                            <div class="canvas-atelier-frame">
+                                <canvas id="sareeCanvas" width="960" height="460"></canvas>
+                                <div class="canvas-corner-flourish tl"></div>
+                                <div class="canvas-corner-flourish tr"></div>
+                                <div class="canvas-corner-flourish bl"></div>
+                                <div class="canvas-corner-flourish br"></div>
+                                <div class="saree-tag-atelier" id="sareeTagBadge">Mangalagiri Silk Saree</div>
+                            </div>
+
+                            <!-- Live Customization Bar on Right Side (Revealed after generation) -->
+                            <div class="preview-customization-bar" id="previewCustomizationBar" style="display: none;">
+                                <div class="custom-bar-header">
+                                    <span class="bar-gem">🎨</span>
+                                    <strong data-en="Live Color & Pattern Adjustments" data-te="ప్రత్యక్ష రంగులు & ప్యాటర్న్ మార్పులు">Live Color & Pattern Adjustments</strong>
+                                    <span class="bar-note" data-en="(Updates canvas instantly)" data-te="(వెంటనే అప్డేట్ అవుతుంది)">(Updates canvas instantly)</span>
+                                </div>
+                                <div class="custom-bar-controls">
+                                    <div class="custom-item">
+                                        <label for="s3BodyColorPicker" data-en="Body" data-te="బాడీ">Body</label>
+                                        <div class="mini-picker-wrap">
+                                            <input type="color" id="s3BodyColorPicker" class="mini-color-input" value="#800020">
+                                            <span id="s3BodyHexTag" class="mini-hex">#800020</span>
+                                        </div>
+                                    </div>
+                                    <div class="custom-item">
+                                        <label for="s3BorderColorPicker" data-en="Border" data-te="బోర్డర్">Border</label>
+                                        <div class="mini-picker-wrap">
+                                            <input type="color" id="s3BorderColorPicker" class="mini-color-input" value="#D97706">
+                                            <span id="s3BorderHexTag" class="mini-hex">#D97706</span>
+                                        </div>
+                                    </div>
+                                    <div class="custom-item">
+                                        <label for="s3PalluColorPicker" data-en="Pallu" data-te="పల్లూ">Pallu</label>
+                                        <div class="mini-picker-wrap">
+                                            <input type="color" id="s3PalluColorPicker" class="mini-color-input" value="#991B1B">
+                                            <span id="s3PalluHexTag" class="mini-hex">#991B1B</span>
+                                        </div>
+                                    </div>
+                                    <div class="custom-item">
+                                        <label for="s3ZariColorPicker" data-en="Zari" data-te="జరీ">Zari</label>
+                                        <div class="mini-picker-wrap">
+                                            <input type="color" id="s3ZariColorPicker" class="mini-color-input" value="#FBBF24">
+                                            <span id="s3ZariHexTag" class="mini-hex">#FBBF24</span>
+                                        </div>
+                                    </div>
+                                    <div class="custom-item select-custom-item">
+                                        <label for="s3MotifSelect" data-en="Motif" data-te="మోటిఫ్">Motif</label>
+                                        <select id="s3MotifSelect" class="mini-select">
+                                            <option value="peacock">Peacock</option>
+                                            <option value="mango">Mango</option>
+                                            <option value="lotus">Lotus</option>
+                                            <option value="temple">Temple</option>
+                                            <option value="ikat">Ikat</option>
+                                            <option value="elephant">Elephant</option>
+                                            <option value="swan">Swan</option>
+                                        </select>
+                                    </div>
+                                    <div class="custom-item select-custom-item">
+                                        <label for="s3BorderSelect" data-en="Border" data-te="బోర్డర్">Border</label>
+                                        <select id="s3BorderSelect" class="mini-select">
+                                            <option value="temple">Temple</option>
+                                            <option value="double_zari">Double Zari</option>
+                                            <option value="peacock_border">Peacock</option>
+                                            <option value="ikat_wave">Ikat Wave</option>
+                                            <option value="chevron_pattern">Chevron</option>
+                                            <option value="zari_stripes">Stripes</option>
+                                        </select>
+                                    </div>
+                                    <div class="custom-item select-custom-item">
+                                        <label for="s3PalluSelect" data-en="Pallu" data-te="పల్లూ">Pallu</label>
+                                        <select id="s3PalluSelect" class="mini-select">
+                                            <option value="grand_medallion">Chakra</option>
+                                            <option value="decorative_pallu">Floral</option>
+                                            <option value="cascade_temple">Temple</option>
+                                            <option value="traditional_stripes">Stripes</option>
+                                            <option value="ikat_block">Ikat</option>
+                                        </select>
+                                    </div>
+                                    <div class="custom-item select-custom-item">
+                                        <label for="s3BodyPatternSelect" data-en="Pattern" data-te="ప్యాటర్న్">Pattern</label>
+                                        <select id="s3BodyPatternSelect" class="mini-select">
+                                            <option value="floral_vines">Floral Vines</option>
+                                            <option value="checks">Checks</option>
+                                            <option value="lattice">Lattice Jaal</option>
+                                            <option value="paisley_lattice">Paisley Jaal</option>
+                                            <option value="diagonal_ikat">Diagonal Ikat</option>
+                                            <option value="stripes">Stripes</option>
+                                            <option value="scattered_buttis">Buttis</option>
+                                            <option value="solid">Solid</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- AI Specifications & Detected Rationale -->
+                            <div class="specs-editorial-box">
+                                <div class="detected-chips-row" id="detectedReqsBox">
+                                    <span class="detected-chip" id="chipColor">🎨 Color: <b>Bridal Crimson & Gold</b></span>
+                                    <span class="detected-chip" id="chipMotif">🪷 Motif: <b>Peacock (Mayuri)</b></span>
+                                    <span class="detected-chip" id="chipBorder">🏛️ Border: <b>Temple Nizam Border</b></span>
+                                    <span class="detected-chip" id="chipStyle">🧵 Style: <b>Traditional Andhra Handloom</b></span>
+                                </div>
+                                <div class="ai-rationale-summary">
+                                    <p id="aiSummaryText">
+                                        Select an artisanal category or express your vision using voice/text, then click "Generate My Design".
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Weaver Jacquard Technical Card -->
+                            <div class="jacquard-technical-card">
+                                <div class="jacquard-card-header">
+                                    <span class="jacquard-icon">📋</span>
+                                    <h4 data-en="Weaver Jacquard Card & Yarn Specifications" data-te="చేనేత మగ్గం వివరణాత్మక పత్రం">
+                                        Weaver Jacquard Card & Yarn Specifications
+                                    </h4>
+                                </div>
+                                <table class="jacquard-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-lbl" data-en="Warp Yarn (పడు పేక):" data-te="పడు నూలు:">Warp Yarn (పడు):</td>
+                                            <td class="col-val" id="specWarp">2/120s Mulberry Silk</td>
+                                            <td class="col-lbl" data-en="Weft Yarn (పేక దారం):" data-te="పేక నూలు:">Weft Yarn (పేక):</td>
+                                            <td class="col-val" id="specWeft">Pure Silk 20/22 Denier</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-lbl" data-en="Reed / Picks:" data-te="రీడ్ / పిక్స్:">Reed / Picks:</td>
+                                            <td class="col-val" id="specReed">84 Reed / 92 Picks</td>
+                                            <td class="col-lbl" data-en="Jacquard Cards:" data-te="జాకార్డ్ కార్డ్స్:">Jacquard Cards:</td>
+                                            <td class="col-val" id="specCards">240 Hooks Jacquard Set</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-lbl" data-en="Weaving Duration:" data-te="అంచనా రోజులు:">Weaving Duration:</td>
+                                            <td class="col-val" id="specDuration" colspan="3">7 - 10 Days</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Actions Row: Save, Download, Print -->
+                            <div class="atelier-action-toolbar">
+                                <button class="btn-atelier-action primary" id="saveDesignBtn" type="button">
+                                    <span>💾</span>
+                                    <span data-en="Save Design" data-te="డిజైన్ దాచండి">Save Design</span>
+                                </button>
+                                <button class="btn-atelier-action secondary" id="downloadPreviewBtn" type="button">
+                                    <span>🖼️</span>
+                                    <span data-en="Download Image" data-te="డౌన్‌లోడ్">Download Image</span>
+                                </button>
+                                <button class="btn-atelier-action secondary" id="printCardBtn" type="button">
+                                    <span>🖨️</span>
+                                    <span data-en="Print Spec Card" data-te="కార్డ్ ప్రింట్">Print Spec Card</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             PAGE FOUR: ABOUT
+             ========================================================= -->
+        <section id="page-about" class="page-view">
+            <div class="site-container">
+                
+                <!-- About Header -->
+                <div class="page-title-banner">
+                    <span class="sub-flourish">❖ TRADITION & PURPOSE ❖</span>
+                    <h1 class="page-heading" data-en="About Chenetha Design Mitra" data-te="చేనేత డిజైన్ మిత్ర గురించి">
+                        About Chenetha Design Mitra
+                    </h1>
+                    <p class="page-lead" data-en="Bridging millennia of indigenous handloom weaving heritage with modern generative AI technology for artisan empowerment." data-te="వేల ఏళ్ల చేనేత కళా సంప్రదాయాన్ని ఆధునిక AI సాంకేతికతతో అనుసంధానించే సామాజిక సేవా ప్రాజెక్ట్.">
+                        Bridging millennia of indigenous handloom weaving heritage with modern generative AI technology for artisan empowerment.
+                    </p>
+                </div>
+
+                <!-- Editorial Columns -->
+                <div class="about-editorial-grid">
+                    <div class="about-card">
+                        <div class="about-card-icon">🏛️</div>
+                        <h3 class="about-card-title" data-en="The Sacred Art of Handloom" data-te="చేనేత పవిత్ర కళా వారసత్వం">The Sacred Art of Handloom</h3>
+                        <p class="about-card-text" data-en="Handloom weaving in Andhra Pradesh and South India represents more than textile production; it is living geometry and spiritual devotion. In weaving clusters such as Mangalagiri, Uppada, Pochampally, Venkatagiri, and Dharmavaram, master weavers interlaced natural silk and zari to tell stories of sacred gopurams, blooming lotuses, and celestial swans." data-te="ఆంధ్రప్రదేశ్ చేనేత రంగం మన సాంస్కృతిక వారసత్వానికి ప్రతీక. మంగళగిరి, ఉప్పాడ, పోచంపల్లి వంటి గ్రామీణ కేంద్రాల్లో ప్రతి నూలుపోగు వెనుక కళాకారుల శ్రమ, పవిత్రత మరియు గణిత నైపుణ్యం దాగి ఉన్నాయి.">
+                            Handloom weaving in Andhra Pradesh and South India represents more than textile production; it is living geometry and spiritual devotion. In weaving clusters such as Mangalagiri, Uppada, Pochampally, Venkatagiri, and Dharmavaram, master weavers interlaced natural silk and zari to tell stories of sacred gopurams, blooming lotuses, and celestial swans.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">⚡</div>
+                        <h3 class="about-card-title" data-en="Challenges Faced by Weavers" data-te="చేనేత కార్మికులు ఎదుర్కొంటున్న సవాళ్లు">Challenges Faced by Weavers</h3>
+                        <p class="about-card-text" data-en="Traditional weavers face severe systemic obstacles: manual jacquard graph drafting on paper can take weeks for a single novel motif; rural weavers remain disconnected from fast-evolving urban bridal trends; and intense competition from industrial powerlooms creates economic pressure, driving younger generations away from pit looms." data-te="జాకార్డ్ మగ్గం కోసం కొత్త డిజైన్ల గ్రాఫ్ తయారు చేయడం చాలా శ్రమతో కూడుకున్నది; మారుతున్న ఫ్యాషన్ ట్రెండ్స్‌ను వేగంగా అందుకోవడం మరియు ఆధునిక పవర్ లూమ్స్‌తో పోటీ పడటం సాంప్రదాయ చేనేతకారులకు పెను సవాలుగా మారింది.">
+                            Traditional weavers face severe systemic obstacles: manual jacquard graph drafting on paper can take weeks for a single novel motif; rural weavers remain disconnected from fast-evolving urban bridal trends; and intense competition from industrial powerlooms creates economic pressure, driving younger generations away from pit looms.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">🤖</div>
+                        <h3 class="about-card-title" data-en="Purpose of This Project" data-te="ఈ ప్రాజెక్ట్ ప్రధాన లక్ష్యం">Purpose of This Project</h3>
+                        <p class="about-card-text" data-en="Chenetha Design Mitra was conceived as an impactful College Community Service Project (CSP) prototype. Our mission is not to replace the weaver, but to provide them with a digital design co-pilot: an intelligent, voice-first design studio that turns spoken customer ideas directly into visual saree layouts and technical yarn specifications." data-te="చేనేత డిజైన్ మిత్ర ప్రాజెక్ట్ లక్ష్యం కళాకారుల ప్రతిభను మరింత సులభతరం చేయడం. కస్టమర్ల వాయిస్ కోరికలను డిజిటల్ డిజైన్‌గా మార్చి, మగ్గంపై నేయడానికి అనువైన కొలతలను వెంటనే అందించడం ద్వారా శ్రమ మరియు సమయం ఆదా అవుతుంది.">
+                            Chenetha Design Mitra was conceived as an impactful College Community Service Project (CSP) prototype. Our mission is not to replace the weaver, but to provide them with a digital design co-pilot: an intelligent, voice-first design studio that turns spoken customer ideas directly into visual saree layouts and technical yarn specifications.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">🎙️</div>
+                        <h3 class="about-card-title" data-en="How the Tool Empowers Users" data-te="ఈ సాధనం ఎలా ఉపయోగపడుతుంది?">How the Tool Empowers Users</h3>
+                        <p class="about-card-text" data-en="Weavers and customers can simply speak in Telugu ('పెళ్లి కోసం కెంపు రంగు పట్టు చీర') or English. The engine synthesizes authentic color harmonies, calculates warp/weft counts, drafts reed/pick numbers, and displays single large saree simulations across Flat, Drape, and Zoom modes before a single silk thread is cut." data-te="వినియోగదారులు మరియు నేత కార్మికులు తెలుగులో మాట్లాడితే చాలు, AI ఆ వివరాలను విశ్లేషించి రంగుల మేళవింపును, పడు-పేక నూలు వివరాలను మరియు రీడ్/పిక్స్ సంఖ్యను తక్షణమే లెక్కిస్తుంది. చీర నేయకముందే దాని అందాన్ని ప్రత్యక్షంగా చూడవచ్చు.">
+                            Weavers and customers can simply speak in Telugu ('పెళ్లి కోసం కెంపు రంగు పట్టు చీర') or English. The engine synthesizes authentic color harmonies, calculates warp/weft counts, drafts reed/pick numbers, and displays single large saree simulations across Flat, Drape, and Zoom modes before a single silk thread is cut.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cluster Spotlight -->
+                <div class="clusters-spotlight-sec">
+                    <h3 class="spotlight-title" data-en="Preserved Handloom Clusters of Andhra Pradesh" data-te="ఆంధ్రప్రదేశ్ ప్రముఖ చేనేత కేంద్రాలు">
+                        Preserved Handloom Clusters of Andhra Pradesh
+                    </h3>
+                    <div class="cluster-cards-row">
+                        <div class="cluster-mini-card">
+                            <h4>Mangalagiri</h4>
+                            <span class="cluster-meta">Guntur District</span>
+                            <p>Renowned for solid zari Nizam borders and durable 80s/100s combed cotton and pure mulberry silks.</p>
+                        </div>
+                        <div class="cluster-mini-card">
+                            <h4>Uppada</h4>
+                            <span class="cluster-meta">East Godavari</span>
+                            <p>Famous for translucent gossamer Jamdani weaving techniques using fine non-mechanical floral insertion.</p>
+                        </div>
+                        <div class="cluster-mini-card">
+                            <h4>Pochampally</h4>
+                            <span class="cluster-meta">Yadadri Cluster</span>
+                            <p>Global GI-tagged double ikat stepped geometric diamond patterns created through tie-and-dye warp/weft resist.</p>
+                        </div>
+                        <div class="cluster-mini-card">
+                            <h4>Venkatagiri</h4>
+                            <span class="cluster-meta">Tirupati District</span>
+                            <p>Historic royal weaving guild celebrated for ultra-lightweight muslin silks and solid gold ribbon borders.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Action -->
+                <div class="about-cta-center">
+                    <button class="btn-primary-luxury" onclick="navigateToPage('studio')" type="button">
+                        <span>✨</span>
+                        <span data-en="Experience the Design Studio" data-te="డిజైన్ స్టూడియోను ప్రయత్నించండి">Experience the Design Studio</span>
+                        <span>➔</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             PAGE FIVE: CONTACT
+             ========================================================= -->
+        <section id="page-contact" class="page-view">
+            <div class="site-container">
+                
+                <!-- Contact Header -->
+                <div class="page-title-banner">
+                    <span class="sub-flourish">❖ ARTISAN GUILDS & ATELIER ❖</span>
+                    <h1 class="page-heading" data-en="Contact Handloom Studio" data-te="సంప్రదించండి & కేంద్రాల వివరాలు">
+                        Contact Handloom Studio
+                    </h1>
+                    <p class="page-lead" data-en="Reach out for collaborative weaver cooperative programs, custom loom setups, or academic project inquiries." data-te="చేనేత సహకార సంఘాలు, డిజైన్ సహకారం లేదా ప్రాజెక్ట్ వివరాల కోసం మమ్మల్ని సంప్రదించండి.">
+                        Reach out for collaborative weaver cooperative programs, custom loom setups, or academic project inquiries.
+                    </p>
+                </div>
+
+                <div class="contact-layout-grid">
+                    
+                    <!-- Left: Contact Details & Cluster Registry -->
+                    <div class="contact-info-col">
+                        
+                        <div class="contact-luxury-card">
+                            <h3 class="contact-card-heading" data-en="Atelier Headquarters" data-te="స్టూడియో ప్రధాన కేంద్రం">Atelier Headquarters</h3>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon">🏛️</span>
+                                <div>
+                                    <strong>Chenetha Design Mitra Lab</strong>
+                                    <p>Community Service Project (CSP) Research Atelier<br>Andhra Pradesh, India</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon">✉️</span>
+                                <div>
+                                    <strong>Direct Email</strong>
+                                    <p>artisan@chenetha-designmitra.org<br>contact@handloomstudio.in</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon">📞</span>
+                                <div>
+                                    <strong>Weaver Helpline & Voice Support</strong>
+                                    <p>+91 (0863) 244-8899<br>Dual Telugu & English Artisan Assistance</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon">⏰</span>
+                                <div>
+                                    <strong>Loom Hours</strong>
+                                    <p>Monday – Saturday: 9:00 AM – 6:00 PM IST<br>Sunday: Traditional Artisan Rest Day</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Weaving Societies Directory Card -->
+                        <div class="contact-societies-card">
+                            <h4 data-en="Partner Weaver Cooperative Societies" data-te="సహకార చేనేత సంఘాలు">Partner Weaver Cooperative Societies</h4>
+                            <ul class="societies-list">
+                                <li><strong>Mangalagiri Weavers Cooperative Society</strong> — Guntur Dist.</li>
+                                <li><strong>Uppada Handloom Silk Artisans Guild</strong> — Kakinada Coastal Cluster</li>
+                                <li><strong>Pochampally Handloom Park Society</strong> — Bhoodan Pochampally</li>
+                                <li><strong>Venkatagiri Royal Handloom Weavers Union</strong> — Tirupati Hub</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Functional Contact Form -->
+                    <div class="contact-form-col">
+                        <div class="contact-form-card">
+                            <h3 class="form-card-title" data-en="Send Us a Message" data-te="సందేశం పంపండి">Send Us a Message</h3>
+                            <p class="form-card-sub" data-en="Whether you are a handloom patron, master weaver, or student researcher, we welcome your inquiries." data-te="మీ అభిప్రాయాలు, సందేహాలు లేదా ఆర్డర్ వివరాలను ఇక్కడ పంపవచ్చు.">
+                                Whether you are a handloom patron, master weaver, or student researcher, we welcome your inquiries.
+                            </p>
+
+                            <form id="contactForm" onsubmit="handleContactSubmit(event)" novalidate>
+                                <div class="form-row-two">
+                                    <div class="form-field">
+                                        <label for="contactName" data-en="Your Full Name *" data-te="మీ పూర్తి పేరు *">Your Full Name *</label>
+                                        <input type="text" id="contactName" class="form-input" required placeholder="e.g. Smt. Lakshmi Devi">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="contactEmail" data-en="Email Address *" data-te="ఈమెయిల్ చిరునామా *">Email Address *</label>
+                                        <input type="email" id="contactEmail" class="form-input" required placeholder="name@example.com">
+                                    </div>
+                                </div>
+
+                                <div class="form-row-two">
+                                    <div class="form-field">
+                                        <label for="contactPhone" data-en="Phone / WhatsApp Number" data-te="ఫోన్ నంబర్">Phone / WhatsApp Number</label>
+                                        <input type="tel" id="contactPhone" class="form-input" placeholder="+91 98765 43210">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="contactCluster" data-en="Weaving Cluster of Interest" data-te="ఆసక్తిగల చేనేత కేంద్రం">Weaving Cluster of Interest</label>
+                                        <select id="contactCluster" class="form-input">
+                                            <option value="Mangalagiri">Mangalagiri (Cotton & Silk)</option>
+                                            <option value="Uppada">Uppada (Jamdani Silk)</option>
+                                            <option value="Pochampally">Pochampally (Ikat Diamonds)</option>
+                                            <option value="Venkatagiri">Venkatagiri (Zari Ribbon Silk)</option>
+                                            <option value="Dharmavaram">Dharmavaram (Bridal Brocade)</option>
+                                            <option value="General">All Andhra Handloom Clusters</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="contactPurpose" data-en="Purpose of Inquiry" data-te="విషయం">Purpose of Inquiry</label>
+                                    <select id="contactPurpose" class="form-input">
+                                        <option value="Custom Design">Custom Saree Design / Weaving Specification</option>
+                                        <option value="Weaver Collaboration">Artisan Cooperative Collaboration</option>
+                                        <option value="Academic Project">Academic CSP Project Inquiry</option>
+                                        <option value="Feedback">Feedback / Suggestions</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="contactMessage" data-en="Your Message / Requirement Details *" data-te="మీ సందేశం / వివరాలు *">Your Message / Requirement Details *</label>
+                                    <textarea id="contactMessage" class="form-input" rows="4" required placeholder="Please describe your interest, preferred motif, or cooperative details..."></textarea>
+                                </div>
+
+                                <button type="submit" id="contactSubmitBtn" class="btn-submit-luxury">
+                                    <span>📨</span>
+                                    <span data-en="Submit Inquiry" data-te="సందేశాన్ని పంపండి">Submit Inquiry</span>
+                                    <span>➔</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =============================================================
+         BRAND FOOTER (Consistent Across All Pages)
+         ============================================================= -->
+    <footer class="site-footer">
+        <div class="site-container">
+            <div class="footer-grid">
+                
+                <!-- Col 1: Brand Lore -->
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">HANDLOOM STUDIO</span>
+                    </div>
+                    <p class="footer-bio" data-en="Chenetha Design Mitra (చేనేత డిజైన్ మిత్ర) is an AI-assisted textile atelier developed as an academic College Community Service Project (CSP) prototype to preserve and elevate authentic Indian handloom weaving." data-te="చేనేత డిజైన్ మిత్ర అనేది భారతీయ చేనేత కళా వైభవాన్ని పరిరక్షించేందుకు రూపొందించబడిన AI డిజైన్ సహాయక వేదిక.">
+                        Chenetha Design Mitra (చేనేత డిజైన్ మిత్ర) is an AI-assisted textile atelier developed as an academic College Community Service Project (CSP) prototype to preserve and elevate authentic Indian handloom weaving.
+                    </p>
+                    <div class="footer-artisan-seal">
+                        <span>❖ 100% ARTISAN HANDLOOM REVERENCE ❖</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title" data-en="Atelier Navigation" data-te="లింకులు">Atelier Navigation</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#home" onclick="navigateToPage('home'); return false;" data-en="Home / Discover" data-te="హోమ్">Home / Discover</a></li>
+                        <li><a href="#explore" onclick="navigateToPage('explore'); return false;" data-en="Explore Collections" data-te="సేకరణలు">Explore Collections</a></li>
+                        <li><a href="#studio" onclick="navigateToPage('studio'); return false;" data-en="Design Studio" data-te="డిజైన్ స్టూడియో">Design Studio</a></li>
+                        <li><a href="#about" onclick="navigateToPage('about'); return false;" data-en="About the Initiative" data-te="మా గురించి">About the Initiative</a></li>
+                        <li><a href="#contact" onclick="navigateToPage('contact'); return false;" data-en="Contact & Clusters" data-te="సంప్రదించండి">Contact & Clusters</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Traditional Clusters -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title" data-en="Handloom Clusters" data-te="చేనేత కేంద్రాలు">Handloom Clusters</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#explore" onclick="selectStyleAndGoStudio('Traditional Andhra'); return false;">Mangalagiri Cotton & Silk</a></li>
+                        <li><a href="#explore" onclick="selectStyleAndGoStudio('Peacock'); return false;">Uppada Jamdani Silks</a></li>
+                        <li><a href="#explore" onclick="selectStyleAndGoStudio('Geometric'); return false;">Pochampally Double Ikat</a></li>
+                        <li><a href="#explore" onclick="selectStyleAndGoStudio('Temple Border'); return false;">Venkatagiri Zari Spires</a></li>
+                        <li><a href="#explore" onclick="selectStyleAndGoStudio('Paisley/Mango'); return false;">Dharmavaram Bridal Brocade</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Project Info -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-title" data-en="Academic Project" data-te="ప్రాజెక్ట్ వివరాలు">Academic Project</h4>
+                    <p class="footer-info-text">
+                        <strong>College Community Service Project (CSP)</strong><br>
+                        AI-Powered Design Suggestion Tool for Handloom Weavers.<br>
+                        Supports Web Speech API (Telugu / English) & SQL Server / Local Storage.
+                    </p>
+                    <div class="footer-lang-status">
+                        <span>🌐 English | తెలుగు</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Ribbon -->
+            <div class="footer-bottom-ribbon">
+                <p class="copyright-text">
+                    &copy; 2026 HANDLOOM STUDIO (Chenetha Design Mitra). Built for Traditional Handloom Weavers.
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#about" onclick="navigateToPage('about'); return false;">Handloom Heritage</a>
+                    <span>•</span>
+                    <a href="#studio" onclick="navigateToPage('studio'); return false;">Digital Atelier</a>
+                    <span>•</span>
+                    <a href="#contact" onclick="navigateToPage('contact'); return false;">Artisan Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- =============================================================
+         SAVED DESIGNS MODAL
+         ============================================================= -->
+    <div class="modal-overlay" id="collectionModal">
+        <div class="modal-content-luxury">
+            <div class="modal-header-luxury">
+                <div>
+                    <h3 data-en="Saved Handloom Saree Collection" data-te="భద్రపరిచిన చేనేత డిజైన్లు">Saved Handloom Saree Collection</h3>
+                    <p class="modal-sub" data-en="Designs saved to SQL Server / Local Storage" data-te="డేటాబేస్ లో భద్రపరిచిన డిజైన్లు">Designs saved to SQL Server / Local Storage</p>
+                </div>
+                <button class="close-luxury-btn" id="closeCollectionBtn" type="button">&times;</button>
+            </div>
+            <div class="modal-body-luxury" id="savedDesignsContainer">
+                <!-- Dynamically loaded saved designs -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =============================================================
+         NOTIFICATION TOAST CONTAINER
+         ============================================================= -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
